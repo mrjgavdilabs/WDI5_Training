@@ -16,7 +16,7 @@
 				<Image src="../misc/logo.png" class="sapUiMediumMargin"/>
 				<HBox justifyContent="Center" alignItems="Center" class="sapUiLargeMarginBottom">
 					<Text text="Input your name!" class="sapUiTinyMarginEnd"/>
-					<Input value="John Joe" width="15rem"/>
+					<Input id="nameInput" value="John Joe" width="15rem"/>
 				</HBox>
 				<Button text="Press me!" press="navToSecond" width="6rem"/>
 				<HBox alignItems="End">

@@ -1,4 +1,6 @@
 import { wdi5 } from "wdio-ui5-service"
+import * as selectors from "./selectors/sampleSelectors"
+import Input from "sap/m/Input"
 
 describe("samples", () => {
     it("should log", () => {
@@ -6,16 +8,20 @@ describe("samples", () => {
         logger.log("hello world!")
     })
 
-    // intentionally skipping this as you have to adjust things to your UI5 app :)
-    it.skip("should retrieve a UI5 control", async () => {
+    it("should retrieve a UI5 control", async () => {
         const appLocator = {
             selector: {
                 controlType: "sap.m.App",
-                viewName: "ui5.typescript.helloworld.view.App"
+                viewName: "com.gavdi.wdi5.view.App"
             }
         }
 
         const app = await browser.asControl(appLocator)
-        expect(app).toBeDefined()
+        expect(app).toBeDefined() // Does it exist
     })
+
+    it("should check if the name input is not empty", async () => {
+        const sName = await (await browser.asControl<Input>(selectors.nameInput)).getValue(); // getValue() also needs to be awaited
+        expect(sName.length).toEqual(0); // Intentional error - what is the answer?
+    }) 
 })

@@ -1,0 +1,12 @@
+{
+	"wdi5 selector template": {
+		"scope": "typescript",
+		"prefix": "wdi5SelectorTemplate",
+		"body": [
+			"export const $1: wdi5Selector = {",
+			"",
+			"}"
+		],
+		"description": "Creates scaffolding for wdi5 selector"
+	}
+}
