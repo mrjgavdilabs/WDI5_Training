@@ -11,8 +11,8 @@ describe("samples", () => {
     it("should retrieve a UI5 control", async () => {
         const appLocator = {
             selector: {
-                controlType: "sap.m.App",
-                viewName: "com.gavdi.wdi5.view.App"
+                controlType: "sap.m.Page",
+                viewName: "com.gavdi.wdi5.view.Main"
             }
         }
 
