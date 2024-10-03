@@ -25,3 +25,12 @@ describe("samples", () => {
         expect(sName.length).toEqual(0); // Intentional error - what is the answer?
     }) 
 })
+
+
+// TODO:
+// 
+// 1. Verify that the 'mystery' Button navigates to a new view
+// 
+// 2. Verify that the PopOver includues the message "Hello World!"
+// 
+// Tip: Use the UI5 Journey Recorder to collect correct Selectors
