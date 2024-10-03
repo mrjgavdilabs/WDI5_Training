@@ -68,12 +68,21 @@
 					"pattern": "",
 					"name": "main",
 					"target": "main"
+				},
+				{
+					"pattern": "Second",
+					"name": "second",
+					"target": "second"
 				}
 			],
 			"targets": {
 				"main": {
 					"viewId": "main",
 					"viewName": "Main"
+				},
+				"second": {
+					"viewId": "second",
+					"viewName": "Second"
 				}
 			}
 		}

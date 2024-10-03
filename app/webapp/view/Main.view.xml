@@ -12,18 +12,19 @@
 		title="{i18n>appTitle}"
 		id="page">
 		<content>
-			<IllustratedMessage
-				title="{i18n>appTitle}"
-				illustrationType="sapIllus-SuccessHighFive"
-				enableVerticalResponsiveness="true"
-				description="{i18n>appDescription}">
-				<additionalContent>
-					<Button
-						id="helloButton"
-						text="{formatter: 'formatter.formatValue', path: 'i18n>btnText'}"
-						press="sayHello" />
-				</additionalContent>
-			</IllustratedMessage>
+			<VBox width="100%" height="100%" justifyContent="Center" alignItems="Center">
+				<Image src="../misc/logo.png" class="sapUiMediumMargin"/>
+				<HBox justifyContent="Center" alignItems="Center" class="sapUiLargeMarginBottom">
+					<Text text="Input your name!" class="sapUiTinyMarginEnd"/>
+					<Input value="John Joe" width="15rem"/>
+				</HBox>
+				<Button text="Press me!" press="navToSecond" width="6rem"/>
+				<HBox alignItems="End">
+					<core:Icon src="sap-icon://shortcut" size="5rem" color="gray"/>
+					<Text text="Wonder where this goes..." />
+				</HBox>
+			</VBox>
+			
 		</content>
 	</Page>
 

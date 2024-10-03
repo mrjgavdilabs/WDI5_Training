@@ -1,0 +1,30 @@
+<mvc:View
+	controllerName="com.gavdi.wdi5.controller.Second"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	core:require="{
+		formatter: 'com/gavdi/wdi5/model/formatter'
+	}">
+
+	<Page
+		title="{i18n>appTitle}"
+		id="second">
+		<content>
+			<IllustratedMessage
+				title="High Five!!"
+				illustrationType="sapIllus-SuccessHighFive"
+				enableVerticalResponsiveness="true">
+				<additionalContent>
+					<Button
+						id="helloButton"
+						text="Send your regards"
+						press="sayHello" 
+                        type="Emphasized"/>
+				</additionalContent>
+			</IllustratedMessage>
+		</content>
+	</Page>
+
+</mvc:View>
