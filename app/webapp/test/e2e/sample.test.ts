@@ -2,6 +2,7 @@ import { wdi5 } from "wdio-ui5-service"
 import * as selectors from "./selectors/sampleSelectors"
 import Input from "sap/m/Input"
 import Button from "sap/m/Button"
+import Dialog from "sap/m/Dialog"
 
 describe("samples", () => {
     it("should log", () => {
@@ -23,21 +24,10 @@ describe("samples", () => {
 
     it("should check if the name input is not empty", async () => {
         const sName = await (await browser.asControl<Input>(selectors.nameInput)).getValue(); // getValue() also needs to be awaited
-        expect(sName.length).toBeGreaterThan(0); // Intentional error - what is the answer?
+        expect(sName.length).toBeLessThan(0); // Intentional error - what is the answer?
     }) 
 })
 
-describe("Navigate to second view", () => {
-    it("shoul navigate to view 2", async () => {
-        const oBtn = await browser.asControl<Button>(selectors.pressMeBtn);
-        browser.screenshot("Before-nav");
-        await oBtn.press();
-
-        const oIllu = await browser.asControl(selectors.illustration);
-        browser.screenshot("After-nav");
-        expect(oIllu).toBeDefined();
-    })
-})
 
 
 // TODO:

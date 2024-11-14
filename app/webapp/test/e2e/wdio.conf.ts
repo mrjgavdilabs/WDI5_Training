@@ -94,7 +94,7 @@ export const config: wdi5Config = {
             // grid with only 5 firefox instances available you can make sure that not more than
             // 5 instances get started at a time.
             // maxInstances: 5,
-            browserName: "chrome",
+            browserName: "firefox",
             "goog:chromeOptions": {
                 args:
                     process.argv.indexOf("--headless") > -1
