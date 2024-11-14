@@ -23,7 +23,8 @@ But if it is very important to upload a file to said form, then maybe include th
 
 
 ## Getting Started with this Project
-To get the UI5 up and running, simply navigate to the app folder using `cd app`
+To get the UI5 app up and running, simply navigate to the app folder using `cd app`,
+quickly install all dependecies with `npm i`,
 and start the app using `npm run start`.
 
 ## The WDI5 Samples
@@ -70,7 +71,7 @@ npm init wdi5@latest -- --ts
 ```
 If you are not writing in TypeScript (you should), then just omit the `-- --ts`
 
-Otherwise, WDI5 comes as standard with the `Easy UI5 Generator`
+Otherwise, WDI5 now also comes as standard with the `Easy UI5 Generator`
 
 ## Tips & tricks
 If you are having trouble finding the right selector for your test, you can install the Chrome extension `UI5 Journey Recorder`.
