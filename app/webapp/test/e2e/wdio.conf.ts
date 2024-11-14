@@ -95,13 +95,11 @@ export const config: wdi5Config = {
             // 5 instances get started at a time.
             // maxInstances: 5,
             browserName: "firefox",
-            "goog:chromeOptions": {
-                args:
-                    process.argv.indexOf("--headless") > -1
-                        ? ["--headless=new"]
-                        : process.argv.indexOf("--debug") > -1
-                          ? ["window-size=1440,800", "--auto-open-devtools-for-tabs"]
-                          : ["window-size=1440,800"]
+            browserVersion: "115",
+            "moz:firefoxOptions": {
+                binary: '/extbin/bin/firefox',
+                args:['-headless'],
+                log: {'level': 'trace'}
             },
             acceptInsecureCerts: true
             // If outputDir is provided WebdriverIO can capture driver session logs
